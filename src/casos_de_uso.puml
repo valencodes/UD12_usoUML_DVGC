@@ -1,5 +1,12 @@
 @startuml
 
-(Mostrar menú)
+rectangle  {
+(mostrar menú) as CU1
+(Pedir comida) as CU2
+}
+:Cliente:--CU1
+:Cliente:--CU2
+:Restaurante:--CU1
+:Restaurante:--(Entregar comida)
 
 @enduml
