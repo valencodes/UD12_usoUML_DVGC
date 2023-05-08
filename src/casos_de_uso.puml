@@ -1,7 +1,10 @@
 @startuml
 
-:Cliente:-(Reservar vuelo)
-:Cliente VIP:-(Elegir asientos)
-:Cliente:<|--:Cliente VIP:
+:Cliente:--(Meter dinero)
+:Cliente:--(Pedir azucar)
+:Cliente:--(Pedir producto)
+:Cliente:--(Cancelar)
+(Pedir producto)-.>(Devolver dinero):<<include>>
+(Cancelar)-.>(Devolver dinero):<<include>>
 
 @enduml
