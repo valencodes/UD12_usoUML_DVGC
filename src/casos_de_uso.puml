@@ -1,8 +1,26 @@
 @startuml
+skinparam usecase {
+BackgroundColor Technology
+BorderColor DarkCyan
+}
 
-:Ciudadano:-(Registrar entrada)
-:Ciudadano extranjero:-(Tomar huellas)
-:Ciudadano:<|--:Ciudadano extranjero:
-(Registrar entrada)<-.(Tomar huellas):<<extend>>
+skinparam arrow {
+ArrowColor DarkCyan
+}
+Usecase UC1 as "Sacar dinero
+--
++solicitud hecha"
+Usecase UC2 as "Retener tarjeta
 
+"
+UC1 <- UC2:<<Extend>>
+note left on link
+Descripción
+--
+Condición:
+ {historia sospechosa}
+punto de extensión:
+ solicitud hecha
+end note
 @enduml
+
