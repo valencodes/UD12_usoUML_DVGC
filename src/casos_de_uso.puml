@@ -1,10 +1,12 @@
 @startuml
 
-:Cliente:--(Meter dinero)
-:Cliente:--(Pedir azucar)
-:Cliente:--(Pedir producto)
-:Cliente:--(Cancelar)
-(Pedir producto)-.>(Devolver dinero):<<include>>
-(Cancelar)-.>(Devolver dinero):<<include>>
+:new Actor:--(Identificarse)
+:new Actor:--(Pagar)
+:new Actor:--(Elegir mensajero)
+:new Actor:--(Confirmar)
+(Identificarse)<--(Registrarse):<<extend>>
+(Pagar)<|--(Pagar con tarjeta)
+(Pagar)<|--(Pagar con transferencia)
+
 
 @enduml
