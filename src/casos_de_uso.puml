@@ -1,12 +1,12 @@
 @startuml
 
-:new Actor:--(Identificarse)
-:new Actor:--(Pagar)
-:new Actor:--(Elegir mensajero)
-:new Actor:--(Confirmar)
-(Identificarse)<--(Registrarse):<<extend>>
-(Pagar)<|--(Pagar con tarjeta)
-(Pagar)<|--(Pagar con transferencia)
-
+left to right direction
+:Usuario:--(Iniciar sesion)
+:Usuario:--(Recuperar contraseña)
+:Usuario:--(Modificar contraseña)
+:Usuario:--(Cerrar sesion)
+:Administrador:--(Registrar un usuario)
+:Administrador:--(Instalar programa)
+:Usuario:<|-:Administrador:
 
 @enduml
